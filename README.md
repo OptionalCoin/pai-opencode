@@ -59,7 +59,7 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 
 ## Project Status
 
-**Current Version:** v0.4 - Agent Delegation 🧪 TESTING
+**Current Version:** v0.4 - Agent Delegation ✅ COMPLETE
 
 **Progress to v1.0 Public Release:**
 
@@ -68,7 +68,7 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 | v0.1 | Foundation (Workspace + Git + Research) | ✅ DONE |
 | v0.2 | Vanilla Install (PAI 2.0 packs) | ✅ DONE |
 | v0.3 | Skills Translation (OpenCode lazy loading) | ✅ DONE |
-| v0.4 | Agent Delegation (Hybrid Task API) | 🧪 TESTING |
+| v0.4 | Agent Delegation (Hybrid Task API) | ✅ DONE |
 | v0.5 | History System (OpenCode sessions) | NOT STARTED |
 | v0.6 | Converter Tool (PAI → OpenCode translator) | NOT STARTED |
 | v0.7 | Plugin Adaptation (Hooks → Plugins) | NOT STARTED |
@@ -81,7 +81,9 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 - **v0.3:** Skills translation with 94.96% token reduction, CORE and CreateSkill migrated
 - **v0.4:** 7 core agents migrated, Task wrapper with 19 passing unit tests, <10ms overhead
 
-**This is work-in-progress.** We're actively testing v0.4 Agent Delegation. Installation instructions and full functionality are progressing rapidly.
+![v0.4 Celebration - All 7 Agents Toasting](docs/images/v0.4-celebration-toast.png)
+
+**Work in Progress:** v0.5 History System is next. Installation instructions and full functionality are progressing rapidly.
 
 **Full Roadmap:** See [ROADMAP.md](ROADMAP.md) for detailed milestone specifications.
 
@@ -255,11 +257,14 @@ This project is open source and free to use, modify, and distribute. See [LICENS
 
 ## What's Next?
 
-**Current Focus (v0.4 Testing):**
-1. Live testing of agent delegation in OpenCode environment
-2. Verify `@agent-name` invocation pattern works
-3. Test parallel agent execution
-4. Validate Task wrapper integration
+**v0.4 Complete!** Agent delegation is fully functional. All 7 agents work via `@agent-name` syntax with model variants (`@intern-sonnet`, `@intern-opus`).
+
+**Known Limitation:** Agents don't appear in `/agents` UI picker (UX only, functionality intact). Fix planned for v0.4.1 - see [Issue #1](https://github.com/Steffen025/pai-opencode/issues/1).
+
+**Next Focus (v0.5):**
+- OpenCode-native session storage
+- Session transcript capture
+- History system integration
 
 **Upcoming Milestones:**
 - **v0.5** - History System (OpenCode-native session storage)
