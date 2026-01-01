@@ -1,6 +1,6 @@
 # PAI-OpenCode
 
-[![Status](https://img.shields.io/badge/status-v0.4%20Agent%20Delegation-blue)](https://github.com/Steffen025/pai-opencode)
+[![Status](https://img.shields.io/badge/status-v0.4.2%20Agent%20Profiles-blue)](https://github.com/Steffen025/pai-opencode)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PAI Version](https://img.shields.io/badge/PAI-2.0-green)](https://github.com/danielmiessler/PAI)
 
@@ -59,7 +59,7 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 
 ## Project Status
 
-**Current Version:** v0.4 - Agent Delegation ✅ COMPLETE
+**Current Version:** v0.4.2 - Agent Profiles ✅ COMPLETE
 
 **Progress to v1.0 Public Release:**
 
@@ -69,6 +69,7 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 | v0.2 | Vanilla Install (PAI 2.0 packs) | ✅ DONE |
 | v0.3 | Skills Translation (OpenCode lazy loading) | ✅ DONE |
 | v0.4 | Agent Delegation (Hybrid Task API) | ✅ DONE |
+| v0.4.2 | Agent Profiles (Provider switching) | ✅ DONE |
 | v0.5 | History System (OpenCode sessions) | NOT STARTED |
 | v0.6 | Converter Tool (PAI → OpenCode translator) | NOT STARTED |
 | v0.7 | Plugin Adaptation (Hooks → Plugins) | NOT STARTED |
@@ -77,9 +78,10 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 | v1.0 | **PUBLIC RELEASE** | NOT STARTED |
 
 **Recent Achievements:**
-- **v0.2:** PAI 2.0 vanilla install with kai-core-install pack, submodule integration
-- **v0.3:** Skills translation with 94.96% token reduction, CORE and CreateSkill migrated
-- **v0.4:** 7 core agents migrated, Task wrapper with 19 passing unit tests, <10ms overhead
+- **v0.3:** Skills translation with 94.96% token reduction
+- **v0.4:** 7 core agents migrated, Task wrapper with 19 unit tests
+- **v0.4.1:** Agent UI-Picker visibility fixed
+- **v0.4.2:** Profile system for switching AI providers (Anthropic, OpenAI, Ollama)
 
 ![v0.4 Celebration - All 7 Agents Toasting](docs/images/v0.4-celebration-toast.png)
 
@@ -257,7 +259,13 @@ This project is open source and free to use, modify, and distribute. See [LICENS
 
 ## What's Next?
 
-**v0.4.1 Complete!** Agent delegation is fully functional. All 7 agents work via `@agent-name` syntax and are visible in the `/agents` UI picker with color coding.
+**v0.4.2 Complete!** Agent Profile System enables switching between AI providers with a single command:
+
+```bash
+bun tools/apply-profile.ts local      # Use Ollama for offline work
+bun tools/apply-profile.ts openai     # Use GPT-4o
+bun tools/apply-profile.ts anthropic  # Use Claude (default)
+```
 
 **Next Focus (v0.5):**
 - OpenCode-native session storage

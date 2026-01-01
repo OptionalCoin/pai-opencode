@@ -1,0 +1,11 @@
+name: anthropic
+description: Anthropic Claude models - recommended for best quality
+models:
+  default: anthropic/claude-sonnet-4-5
+  intern: anthropic/claude-haiku-4-5
+  engineer: anthropic/claude-sonnet-4-5
+  architect: anthropic/claude-sonnet-4-5
+  researcher: anthropic/claude-sonnet-4-5
+  designer: anthropic/claude-sonnet-4-5
+  pentester: anthropic/claude-sonnet-4-5
+  writer: anthropic/claude-sonnet-4-5

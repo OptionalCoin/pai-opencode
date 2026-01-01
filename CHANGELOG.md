@@ -5,6 +5,30 @@ All notable changes to PAI-OpenCode will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2026-01-01
+
+### Added
+- Agent Profile System: Switch AI providers with a single command
+- 3 ready-to-use profiles: `anthropic`, `openai`, `local` (Ollama)
+- `tools/apply-profile.ts` CLI tool for profile switching
+- Profile storage in `.opencode/profiles/` directory
+
+### Usage
+```bash
+# List available profiles
+bun tools/apply-profile.ts
+
+# Apply a profile (updates all 7 agent files)
+bun tools/apply-profile.ts local      # Switch to Ollama
+bun tools/apply-profile.ts openai     # Switch to GPT-4o
+bun tools/apply-profile.ts anthropic  # Switch to Claude (default)
+```
+
+### Profiles
+- `anthropic.yaml` - Claude Haiku 4.5 (intern) + Sonnet 4.5 (others)
+- `openai.yaml` - GPT-4o-mini (intern) + GPT-4o (others)
+- `local.yaml` - Llama 3.2 + DeepSeek-Coder (engineer)
+
 ## [0.4.1] - 2026-01-01
 
 ### Added

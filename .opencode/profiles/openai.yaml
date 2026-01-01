@@ -1,0 +1,11 @@
+name: openai
+description: OpenAI GPT models - alternative provider
+models:
+  default: openai/gpt-4o
+  intern: openai/gpt-4o-mini
+  engineer: openai/gpt-4o
+  architect: openai/gpt-4o
+  researcher: openai/gpt-4o
+  designer: openai/gpt-4o
+  pentester: openai/gpt-4o
+  writer: openai/gpt-4o

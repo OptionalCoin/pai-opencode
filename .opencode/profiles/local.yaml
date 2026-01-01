@@ -1,0 +1,11 @@
+name: local
+description: Local Ollama models - offline/private deployment
+models:
+  default: ollama/llama3.2
+  intern: ollama/llama3.2
+  engineer: ollama/deepseek-coder
+  architect: ollama/llama3.2
+  researcher: ollama/llama3.2
+  designer: ollama/llama3.2
+  pentester: ollama/llama3.2
+  writer: ollama/llama3.2
