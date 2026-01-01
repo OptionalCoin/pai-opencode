@@ -5,6 +5,55 @@ All notable changes to PAI-OpenCode will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2026-01-01
+
+### Added
+- Agent UI-Picker Support: Created 7 agent files in `.opencode/agent/` directory
+- Agent files now visible in OpenCode's `/agents` UI picker with color coding
+- All PAI agents now discoverable through both `@agent-name` syntax and UI
+
+### Fixed
+- Agent visibility issue in OpenCode UI picker (agents were functional but invisible)
+- Color format: Use hex colors (`#3B82F6`) instead of color names
+- Model format: Use `anthropic/claude-haiku-4-5` instead of `haiku`
+- Descriptions shortened for UI picker display
+
+### Agents Created
+- `intern.md` - Fast parallel research, analysis, verification (Haiku 4.5)
+- `engineer.md` - Code implementation, debugging, testing (Sonnet 4.5)
+- `architect.md` - System design, PRDs, technical specs (Sonnet 4.5)
+- `researcher.md` - Web research, source verification, analysis (Sonnet 4.5)
+- `designer.md` - UX/UI design, visual systems, accessibility (Sonnet 4.5)
+- `pentester.md` - Security testing, vulnerability assessment (Sonnet 4.5)
+- `writer.md` - Content creation, docs, technical writing (Sonnet 4.5)
+
+### Documentation
+- Updated CHANGELOG.md with v0.4.0 and v0.4.1 entries
+- Updated docs/AGENT-DELEGATION.md with UI picker information
+- Removed "Known Limitation" from README.md
+
+## [0.4.0] - 2026-01-01
+
+### Added
+- Agent Delegation: Implemented hybrid Task wrapper for PAI agent compatibility
+- 7 core PAI agents migrated to OpenCode format
+- Task API wrapper with <10ms overhead
+- Agent routing and delegation system
+- Comprehensive unit tests (19 passing tests)
+
+### Changed
+- Agent invocation uses OpenCode's native `@agent-name` syntax
+- Task wrapper provides backward compatibility with PAI's Task tool pattern
+
+### Technical
+- Task wrapper delegates to OpenCode's native agent system
+- Model selection preserved (haiku for interns, sonnet for specialists)
+- Agent-specific voice IDs maintained for voice feedback integration
+
+### Testing
+- 19 unit tests covering Task wrapper functionality
+- All tests passing with <10ms overhead validated
+
 ## [0.3.0] - 2026-01-01
 
 ### Added

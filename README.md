@@ -257,9 +257,7 @@ This project is open source and free to use, modify, and distribute. See [LICENS
 
 ## What's Next?
 
-**v0.4 Complete!** Agent delegation is fully functional. All 7 agents work via `@agent-name` syntax with model variants (`@intern-sonnet`, `@intern-opus`).
-
-**Known Limitation:** Agents don't appear in `/agents` UI picker (UX only, functionality intact). Fix planned for v0.4.1 - see [Issue #1](https://github.com/Steffen025/pai-opencode/issues/1).
+**v0.4.1 Complete!** Agent delegation is fully functional. All 7 agents work via `@agent-name` syntax and are visible in the `/agents` UI picker with color coding.
 
 **Next Focus (v0.5):**
 - OpenCode-native session storage

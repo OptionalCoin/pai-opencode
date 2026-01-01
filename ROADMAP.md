@@ -71,7 +71,7 @@ A complete, working port where:
 | **v0.1** | Foundation | Workspace + Git | ✅ DONE |
 | **v0.2** | Vanilla Install | PAI 2.0 packs installed | ✅ DONE |
 | **v0.3** | Skills Translation | LazyLoad for OpenCode | ✅ DONE |
-| **v0.4** | Agent Delegation | Hybrid Task API | NOT STARTED |
+| **v0.4** | Agent Delegation | Hybrid Task API | ✅ DONE |
 | **v0.5** | History System | OpenCode-native sessions | NOT STARTED |
 | **v0.6** | Converter Tool | PAI → OpenCode translator | NOT STARTED |
 | **v0.7** | Plugin Adaptation | Hooks → OpenCode plugins | NOT STARTED |
@@ -495,8 +495,8 @@ All decisions documented in Constitution v3.2.0 Section IX:
 |-----------|--------|---------|
 | v0.1 Foundation | ✅ DONE | - |
 | v0.2 Vanilla Install | ✅ DONE | - |
-| v0.3 Skills Translation | NOT STARTED | v0.2 |
-| v0.4 Agent Delegation | NOT STARTED | v0.3 |
+| v0.3 Skills Translation | ✅ DONE | - |
+| v0.4 Agent Delegation | ✅ DONE | - |
 | v0.5 History System | NOT STARTED | v0.2 |
 | v0.6 Converter Tool | NOT STARTED | v0.3, v0.4 |
 | v0.7 Plugin Adaptation | NOT STARTED | Research needed |
