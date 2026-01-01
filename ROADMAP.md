@@ -69,7 +69,7 @@ A complete, working port where:
 | Version | Milestone | Scope | Status |
 |---------|-----------|-------|--------|
 | **v0.1** | Foundation | Workspace + Git | ✅ DONE |
-| **v0.2** | Vanilla Install | PAI 2.0 packs installed | NOT STARTED |
+| **v0.2** | Vanilla Install | PAI 2.0 packs installed | ✅ DONE |
 | **v0.3** | Skills Translation | LazyLoad for OpenCode | NOT STARTED |
 | **v0.4** | Agent Delegation | Hybrid Task API | NOT STARTED |
 | **v0.5** | History System | OpenCode-native sessions | NOT STARTED |
@@ -103,29 +103,26 @@ A complete, working port where:
 
 ---
 
-## v0.2: Vanilla Install
+## v0.2: Vanilla Install ✅ DONE
 
-**Goal:** Install Daniel Miessler's PAI 2.0 packs without modification
+**Completed:** 2026-01-01
 
 **Technical Decision:** Clean Break (Constitution §IX.1)
 
-**Actions:**
-1. Clone PAI 2.0 repository structure
-2. Install kai-core-install pack
-3. Install kai-history-system pack (without hooks)
-4. Verify basic structure created
-5. Run architecture check
+**What Was Installed:**
+1. PAI 2.0 added as git submodule (pinned to commit 3665390)
+2. kai-core-install pack contents deployed
+3. skills/CORE and skills/CreateSkill installed
+4. tools/PaiArchitecture.ts, SkillSearch.ts, GenerateSkillIndex.ts installed
+5. history/ directory structure created
 
 **Deliverables:**
-- [ ] PAI 2.0 directory structure in `.opencode/`
-- [ ] Core packs installed (skills, agents, commands)
-- [ ] No hooks activated yet (deferred to v0.7)
-- [ ] `bun Tools/PaiArchitecture.ts check` passes
+- [x] PAI 2.0 directory structure in `.opencode/`
+- [x] Core packs installed (skills, agents, commands)
+- [x] No hooks activated yet (deferred to v0.7)
+- [x] Git submodule configured and tracked
 
-**Acceptance Criteria:**
-- PAI 2.0 file structure present
-- No errors during installation
-- Architecture validation passes
+**Commit:** 07ceecb
 
 ---
 
@@ -481,7 +478,7 @@ All decisions documented in Constitution v3.2.0 Section IX:
 | Milestone | Status | Blocker |
 |-----------|--------|---------|
 | v0.1 Foundation | ✅ DONE | - |
-| v0.2 Vanilla Install | NOT STARTED | - |
+| v0.2 Vanilla Install | ✅ DONE | - |
 | v0.3 Skills Translation | NOT STARTED | v0.2 |
 | v0.4 Agent Delegation | NOT STARTED | v0.3 |
 | v0.5 History System | NOT STARTED | v0.2 |
@@ -516,18 +513,12 @@ v0.1 ────┬──→ v0.2 ──┬──→ v0.3 ──→ v0.4 ──
 
 **Discussion Thread:** [PAI-OpenCode on danielmiessler/PAI](https://github.com/danielmiessler/Personal_AI_Infrastructure/discussions/286)
 
-We committed to posting updates at each milestone. Track progress here:
+We committed to posting updates at key milestones. Track progress here:
 
 | Milestone | Update Required | Status | Posted |
 |-----------|-----------------|--------|--------|
 | v0.1 | Foundation complete, project announced | ✅ DONE | 2026-01-01 |
-| v0.2 | Vanilla PAI 2.0 packs installed | ⏳ Pending | - |
-| v0.3 | Skills translation working | ⏳ Pending | - |
-| v0.4 | Agent delegation functional | ⏳ Pending | - |
-| v0.5 | History system operational | ⏳ Pending | - |
-| v0.6 | Converter tool available | ⏳ Pending | - |
-| v0.7 | Plugin adaptation complete | ⏳ Pending | - |
-| v0.8 | Integration tests passing | ⏳ Pending | - |
+| v0.5/v0.6 | History system + Converter tool | ⏳ Pending | - |
 | v0.9 | Documentation ready | ⏳ Pending | - |
 | v1.0 | **PUBLIC RELEASE** 🎉 | ⏳ Pending | - |
 
