@@ -72,8 +72,8 @@ A complete, working port where:
 | **v0.2** | Vanilla Install | PAI 2.0 packs installed | ✅ DONE |
 | **v0.3** | Skills Translation | LazyLoad for OpenCode | ✅ DONE |
 | **v0.4** | Agent Delegation | Hybrid Task API | ✅ DONE |
-| **v0.5** | Plugin Infrastructure | Hook→Plugin translation, 8 core plugin equivalents | NOT STARTED |
-| **v0.6** | History System | COMPLETE: OpenCode sessions + PAI knowledge layer | NOT STARTED |
+| **v0.5** | Plugin Infrastructure | Hook→Plugin translation, 8 core plugin equivalents | ✅ DONE |
+| **v0.6** | History System | COMPLETE: OpenCode sessions + PAI knowledge layer | ⚠️ IN PROGRESS (Fixing) |
 | **v0.7** | Converter Tool | PAI→OpenCode translator | NOT STARTED |
 | **v0.8** | Integration Testing | End-to-end validation | NOT STARTED |
 | **v0.9** | Documentation | Public release prep | NOT STARTED |
@@ -552,7 +552,7 @@ All decisions documented in Constitution v3.2.0 Section IX:
 | v0.3 Skills Translation | ✅ DONE | - |
 | v0.4 Agent Delegation | ✅ DONE | - |
 | v0.5 Plugin Infrastructure | ✅ COMPLETE | - |
-| v0.6 History System | NOT STARTED | v0.5 (plugins required) |
+| v0.6 History System | ⚠️ IN PROGRESS (Fixing) | TUI corruption + segfault bugs |
 | v0.7 Converter Tool | NOT STARTED | v0.3, v0.4 |
 | v0.8 Integration | NOT STARTED | v0.2-v0.7 |
 | v0.9 Documentation | NOT STARTED | v0.8 |

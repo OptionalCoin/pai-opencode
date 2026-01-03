@@ -71,7 +71,7 @@ PAI transforms AI coding assistants from reactive chat interfaces into proactive
 | v0.4 | Agent Delegation (Hybrid Task API) | ✅ DONE |
 | v0.4.2 | Agent Profiles (Provider switching) | ✅ DONE |
 | v0.5 | Plugin Infrastructure (Hook→Plugin translation, 8 core plugin equivalents) | ✅ DONE |
-| v0.6 | History System (COMPLETE: OpenCode sessions + PAI knowledge layer) | NOT STARTED |
+| v0.6 | History System (COMPLETE: OpenCode sessions + PAI knowledge layer) | ⚠️ IN PROGRESS (Fixing) |
 | v0.7 | Converter Tool (PAI→OpenCode translator) | NOT STARTED |
 | v0.8 | Integration Testing (End-to-end validation) | NOT STARTED |
 | v0.9 | Documentation (Public release prep) | NOT STARTED |
@@ -287,7 +287,7 @@ This project is open source and free to use, modify, and distribute. See [LICENS
 - Complete two-layer architecture (OpenCode sessions + PAI knowledge)
 
 **Upcoming Milestones:**
-- **v0.6** - History System (COMPLETE: OpenCode sessions + PAI knowledge layer) - ✅ COMPLETE (2026-01-03)
+- **v0.6** - History System (COMPLETE: OpenCode sessions + PAI knowledge layer) - ⚠️ IN PROGRESS (Fixing TUI/Plugin issues)
 - **v0.7** - Converter Tool (PAI→OpenCode translator for upstream updates)
 - **v0.8** - Integration Testing (End-to-end validation)
 - **v0.9** - Documentation (Public release prep)
