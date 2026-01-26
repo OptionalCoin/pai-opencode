@@ -3,6 +3,37 @@ name: CORE
 description: Personal AI Infrastructure core. The authoritative reference for how PAI works.
 ---
 
+# ⛔ CRITICAL: WORKING DIRECTORY - READ FIRST ⛔
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  🚨 MANDATORY PATH RULE - NO EXCEPTIONS 🚨                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  THIS IS OPENCODE. NOT CLAUDE CODE.                                         │
+│                                                                             │
+│  ✅ CORRECT:  ~/.opencode/                                                  │
+│  ❌ WRONG:    ~/.claude/                                                    │
+│  ❌ WRONG:    ~/.Claude/                                                    │
+│                                                                             │
+│  ALL paths for Memory, Skills, Projects, Execution MUST use ~/.opencode/   │
+│                                                                             │
+│  Examples:                                                                  │
+│  ✅ ~/.opencode/MEMORY/projects/cedars/                                     │
+│  ✅ ~/.opencode/MEMORY/execution/Features/                                  │
+│  ✅ ~/.opencode/skills/CORE/                                                │
+│  ❌ ~/.claude/MEMORY/...        ← NEVER USE THIS                            │
+│                                                                             │
+│  If you write to ~/.claude/ you are FRAGMENTING THE DATA STRUCTURE          │
+│  and causing MASSIVE PROBLEMS for the user.                                 │
+│                                                                             │
+│  BEFORE EVERY FILE OPERATION: Verify the path starts with ~/.opencode/     │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 # Intro to PAI and The Algorithm
 
 The PAI system is designed to magnify human capabilities. It is a general problem-solving system that uses the PAI Algorithm.
@@ -531,7 +562,7 @@ Critical PAI documentation organized by domain. Load on-demand based on context.
 | **System Architecture** | `SYSTEM/PAISYSTEMARCHITECTURE.md` | Core PAI design and principles |
 | **Memory System** | `SYSTEM/MEMORYSYSTEM.md` | WORK, STATE, LEARNING directories |
 | **Skill System** | `SYSTEM/SKILLSYSTEM.md` | How skills work, structure, triggers |
-| **Hook System** | `SYSTEM/THEHOOKSYSTEM.md` | Event hooks, patterns, implementation |
+| **Plugin System** | `SYSTEM/THEPLUGINSYSTEM.md` | Event-driven automation, plugin hooks |
 | **Agent System** | `SYSTEM/PAIAGENTSYSTEM.md` | Agent types, spawning, delegation |
 | **Delegation** | `SYSTEM/THEDELEGATIONSYSTEM.md` | Background work, parallelization |
 | **Browser Automation** | `SYSTEM/BROWSERAUTOMATION.md` | Playwright, screenshots, testing |
