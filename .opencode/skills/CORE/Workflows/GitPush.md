@@ -10,12 +10,12 @@
 
 | Repository | Directory | Remote | Purpose |
 |------------|-----------|--------|---------|
-| **PRIVATE PAI** | `~/.opencode/` | `danielmiessler/.claude.git` | Personal PAI instance |
+| **PRIVATE PAI** | `~/.opencode/` | `username/.opencode.git` | Personal PAI instance |
 | **PUBLIC PAI** | `~/Projects/PAI/` | `danielmiessler/PAI.git` | Open source template |
 
 **This workflow is for the PRIVATE repo ONLY.**
 
-Before EVERY push: `git remote -v` must show `.claude.git` NOT `PAI.git`
+Before EVERY push: `git remote -v` must show `.opencode.git` NOT `PAI.git`
 
 ---
 
@@ -39,7 +39,7 @@ cd ~/.opencode && pwd
 
 # MUST show the PRIVATE repo
 git remote -v
-# Expected: origin pointing to your PRIVATE .claude repo
+# Expected: origin pointing to your PRIVATE .opencode repo
 # MUST NOT show: github.com/danielmiessler/PAI.git (the public repo)
 ```
 
