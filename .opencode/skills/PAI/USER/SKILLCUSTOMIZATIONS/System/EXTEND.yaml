@@ -1,6 +1,0 @@
-skill: System
-extends:
-  - Workflows/GitPush.md
-merge_strategy: override
-enabled: true
-description: "Custom GitPush workflow with Jarvis signature"
