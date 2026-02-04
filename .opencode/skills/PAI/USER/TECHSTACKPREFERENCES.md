@@ -9,14 +9,16 @@ This file guides your AI's technology choices to match your preferences and exis
 ## Languages
 
 ### Primary
-- **[Language]:** [e.g., TypeScript] - [When/why you use it]
+- **TypeScript/JavaScript:** Web-based AI systems and SaaS development
+- **Python:** AI/ML automation, data processing, backend services
 
 ### Secondary
-- **[Language]:** [e.g., Python] - [When/why you use it]
-- **[Language]:** [e.g., Go] - [When/why you use it]
+- **Shell Scripting:** Infrastructure automation and server management
+- **Dockerfiles:** Container deployment and system packaging
 
 ### Avoid
-- [Language] - [Why you avoid it]
+- **Enterprise languages** - Heavy frameworks that slow down development
+- **Complex build systems** - Anything that complicates deployment
 
 ---
 
@@ -24,24 +26,25 @@ This file guides your AI's technology choices to match your preferences and exis
 
 | Category | Preference | Notes |
 |----------|------------|-------|
-| JavaScript Runtime | [Node.js / Bun / Deno] | [Why] |
-| Package Manager | [npm / yarn / pnpm / bun] | [Why] |
-| Python Package Manager | [uv / pip / poetry / conda] | [Why] |
+| JavaScript Runtime | **Bun** | Fast, modern, all-in-one tool |
+| Python Package Manager | **pip** | Simple, reliable for automation scripts |
+| Container Runtime | **Docker** | Consistent across all environments |
 
 ---
 
 ## Frameworks
 
 ### Frontend
-- **Preferred:** [e.g., React, Next.js, Astro]
-- **Avoid:** [Frameworks you don't use]
+- **Preferred:** React/Next.js for SaaS dashboards
+- **Avoid:** Heavy frameworks that complicate deployment
 
 ### Backend
-- **Preferred:** [e.g., Hono, Express, FastAPI]
-- **Avoid:** [Frameworks you don't use]
+- **Preferred:** FastAPI (Python), Express (Node.js)
+- **Avoid:** Enterprise frameworks with steep learning curves
 
 ### Full-Stack
-- **Preferred:** [e.g., Next.js, Remix]
+- **Preferred:** Next.js for rapid SaaS development
+- **Self-hosted solutions** over cloud-only services
 
 ---
 
@@ -49,44 +52,46 @@ This file guides your AI's technology choices to match your preferences and exis
 
 | Type | Preference | Use Case |
 |------|------------|----------|
-| Relational | [PostgreSQL] | [Primary data] |
-| Document | [MongoDB] | [Flexible schemas] |
-| Key-Value | [Redis] | [Caching] |
-| Vector | [Pinecone / pgvector] | [Embeddings] |
+| Relational | **PostgreSQL** | Primary data storage |
+| Document | **MongoDB** | Flexible schemas for rapid prototyping |
+| Key-Value | **Redis** | Caching and session management |
+| Vector | **Local/embedded** | AI embeddings when needed |
 
 ---
 
 ## Cloud & Infrastructure
 
-### Primary Cloud
-- **Provider:** [AWS / GCP / Azure / Cloudflare]
-- **Key Services:** [List frequently used services]
+### Primary Environment
+- **Self-hosted**: Ubuntu VPS + local Ubuntu servers
+- **Platform**: Pangolin for cloud deployment
+- **Container**: Docker for everything
 
 ### Hosting Preferences
 | Type | Preference | Notes |
 |------|------------|-------|
-| Static Sites | [Cloudflare Pages / Vercel] | |
-| APIs | [Cloudflare Workers / Lambda] | |
-| Containers | [Fly.io / Railway / ECS] | |
+| Static Sites | Self-hosted on own infrastructure | Full control |
+| APIs | Ubuntu VPS with Docker | Scalable, controllable |
+| Media Servers | arr stack on Docker | Proven media management |
 
 ### Infrastructure as Code
-- [Terraform / Pulumi / CloudFormation / None]
+- **Docker Compose** - Simple, declarative infrastructure
+- **Shell Scripts** - For automation and deployment
 
 ---
 
 ## Development Tools
 
 ### Editor/IDE
-- **Primary:** [VS Code / Cursor / Neovim / etc.]
-- **Extensions:** [Key extensions you use]
+- **AI-first editors** - Tools that integrate AI assistance
+- **Web-based** - For rapid development and collaboration
 
 ### Terminal
-- **Emulator:** [Kitty / iTerm2 / etc.]
-- **Shell:** [zsh / bash / fish]
+- **System-native** - Whatever works best on Ubuntu
+- **Scriptable** - Heavy use of aliases and automation
 
 ### Version Control
-- **Git GUI:** [CLI / GitKraken / Tower / etc.]
-- **Branch Strategy:** [Trunk-based / GitFlow / etc.]
+- **Git CLI** - Direct, scriptable workflow
+- **Feature branches** - For parallel development
 
 ---
 
@@ -95,28 +100,32 @@ This file guides your AI's technology choices to match your preferences and exis
 ### Always Use
 | Category | Library | Why |
 |----------|---------|-----|
-| HTTP Client | [fetch / axios / ky] | |
-| Validation | [zod / joi / yup] | |
-| Date/Time | [date-fns / dayjs / luxon] | |
-| Testing | [vitest / jest / pytest] | |
-| Linting | [ESLint / Biome] | |
+| HTTP Client | fetch/Axios | Reliable API communication |
+| Validation | Zod | TypeScript-first validation |
+| Date/Time | date-fns | Modern date handling |
+| Testing | Built-in + manual | Quick verification |
+| Automation | Custom scripts | Tailored to specific needs |
 
 ### Avoid
 | Library | Use Instead | Reason |
 |---------|-------------|--------|
-| [Library] | [Alternative] | [Why] |
+| Heavy frameworks | Lightweight libs | Faster deployment |
+| Complex ORMs | Raw SQL | More control |
+| Build tools | Minimal setup | Reduce complexity |
 
 ---
 
 ## AI & ML
 
-### LLM Providers
-- **Primary:** [Anthropic / OpenAI / etc.]
-- **Models:** [Preferred models for different tasks]
+### LLM Integration
+- **PAI-OpenCode** - Primary AI development platform
+- **API-first** - Direct integration with AI services
+- **Local processing** - When possible, keep data private
 
 ### AI Tools
-- [e.g., Cursor for coding]
-- [e.g., Claude Code for CLI]
+- **Automated workflows** - Build once, run forever
+- **Decision systems** - AI-assisted business logic
+- **Content generation** - Automated marketing and copy
 
 ---
 
@@ -124,18 +133,47 @@ This file guides your AI's technology choices to match your preferences and exis
 
 ### Default Project Setup
 ```bash
-# Your typical project initialization
-[commands]
+# Initialize new project structure
+mkdir project && cd project
+npm init -y  # or bun init
+docker init   # Container setup
+git init
 ```
 
 ### Standard File Structure
 ```
 project/
-├── src/
-├── tests/
-├── docs/
-└── [your structure]
+├── docker-compose.yml    # Infrastructure definition
+├── src/                 # Application code
+├── scripts/             # Automation scripts
+├── tests/               # Quick verification
+└── README.md            # Documentation
 ```
+
+### Deployment Philosophy
+1. **Container first** - Everything in Docker
+2. **Infrastructure as code** - Automated setup
+3. **Self-hosted when possible** - Maintain control
+4. **Simple over complex** - Reduce moving parts
+
+---
+
+## Specializations
+
+### SaaS Development
+- Rapid prototyping with modern frameworks
+- User authentication and billing systems
+- Automated deployment and scaling
+
+### Media Management
+- arr stack for content automation
+- Docker-based media servers
+- Automated content pipelines
+
+### AI Automation
+- API integrations with AI services
+- Custom automation scripts
+- Decision support systems
 
 ---
 
