@@ -20,6 +20,13 @@ node_modules/
 # Security patterns (user customizes)
 .opencode/PAISECURITYSYSTEM/patterns.yaml
 
-# PAI Skill Customizations (User Data)
-.opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/*
-!.opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/README.md
+# PAI Skill User Data (Private)
+.opencode/skills/PAI/USER/*
+!.opencode/skills/PAI/USER/README.md
+!.opencode/skills/PAI/USER/.gitkeep
+!.opencode/skills/PAI/USER/*/
+.opencode/skills/PAI/USER/*/*
+!.opencode/skills/PAI/USER/*/README.md
+!.opencode/skills/PAI/USER/*/.gitkeep
+
+
