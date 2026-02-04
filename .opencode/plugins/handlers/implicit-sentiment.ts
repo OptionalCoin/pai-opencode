@@ -33,7 +33,7 @@
 
 import { appendFileSync, mkdirSync, existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { inference } from '../../skills/PAI/Tools/Inference';
+import { inference } from '../../skills/PAI/Tools/Inference.ts';
 import { getIdentity, getPrincipal } from '../lib/identity';
 import { getLearningCategory } from '../lib/learning-utils';
 import { getISOTimestamp, getYearMonth, getFilenameTimestamp } from '../lib/time';
