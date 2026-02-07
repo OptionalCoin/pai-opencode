@@ -21,9 +21,20 @@ node_modules/
 .opencode/settings.json
 opencode.json
 
-# User data folders (symlinked)
-.opencode/USER
-.opencode/skills/PAI/USER
+# Personal user data folders (symlinked)
+.opencode/USER/*
+!.opencode/USER/.gitkeep
+!.opencode/USER/README.md
+
+.opencode/skills/PAI/USER/TELOS
+.opencode/skills/PAI/USER/BUSINESS
+.opencode/skills/PAI/USER/FINANCES
+.opencode/skills/PAI/USER/HEALTH
+.opencode/skills/PAI/USER/WORK
+.opencode/skills/PAI/USER/TERMINAL
+.opencode/skills/PAI/USER/BANNER
+.opencode/skills/PAI/USER/STATUSLINE
+.opencode/skills/PAI/USER/PAISECURITYSYSTEM
 
 # ============================================
 # PAI SYSTEM & RUNTIME DATA
@@ -38,3 +49,9 @@ opencode.json
 # OBSIDIAN (personal notes)
 # ============================================
 .obsidian/
+
+# ============================================
+# SKILLCUSTOMIZATIONS - LEGITIMATE REPO CHANGES
+# ============================================
+# These are skill customizations that SHOULD be committed
+!opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/
