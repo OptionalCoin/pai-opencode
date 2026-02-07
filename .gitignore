@@ -12,10 +12,29 @@ node_modules/
 *.log
 .DS_Store
 
-# Personal content (user customizes)
-.opencode/USER/*
-!.opencode/USER/README.md
-!.opencode/USER/.gitkeep
+# ============================================
+# PERSONAL CONFIGURATION (symlinked to ~/.pai-brain)
+# ============================================
+# These files point to ~/.pai-brain and should NOT be committed as real files
 
-# Security patterns (user customizes)
-.opencode/PAISECURITYSYSTEM/patterns.yaml
+# Main config files (symlinked)
+.opencode/settings.json
+opencode.json
+
+# User data folders (symlinked)
+.opencode/USER
+.opencode/skills/PAI/USER
+
+# ============================================
+# PAI SYSTEM & RUNTIME DATA
+# ============================================
+# Ignore runtime memory and session files
+.opencode/MEMORY/
+.opencode/sessions/
+.opencode/SESSIONS/
+.pai-brain/
+
+# ============================================
+# OBSIDIAN (personal notes)
+# ============================================
+.obsidian/
