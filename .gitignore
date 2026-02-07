@@ -23,7 +23,7 @@ opencode.json
 
 # Personal data folders (symlinked if they exist in ~/.pai-brain)
 .opencode/USER/
-.opencode/skills/PAI/USER/
+.opencode/skills/PAI/USER/SOFTWAREREFERENCE
 .opencode/MEMORY/
 .pai-brain/
 
@@ -36,4 +36,6 @@ opencode.json
 # SKILLCUSTOMIZATIONS - LEGITIMATE REPO CHANGES
 # ============================================
 # These are skill customizations that SHOULD be committed
-!opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/
+# (already inside .opencode/skills/PAI/USER which is ignored above)
+!.opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/
+!.opencode/skills/PAI/USER/SKILLCUSTOMIZATIONS/**

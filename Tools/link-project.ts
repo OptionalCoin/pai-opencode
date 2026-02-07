@@ -17,7 +17,7 @@ const CORE_LINKS = [
 const USER_DATA_FOLDERS = [
   { source: join(BRAIN_DIR, 'USER'), target: join(OPENCODE_DIR, 'USER'), desc: 'User data' },
   { source: join(BRAIN_DIR, 'MEMORY'), target: join(OPENCODE_DIR, 'MEMORY'), desc: 'PAI memory' },
-  { source: join(BRAIN_DIR, 'skills/PAI/USER'), target: join(OPENCODE_DIR, 'skills/PAI/USER'), desc: 'Skill user data' },
+  { source: join(BRAIN_DIR, 'skills/PAI/USER/SOFTWAREREFERENCE'), target: join(OPENCODE_DIR, 'skills/PAI/USER/SOFTWAREREFERENCE'), desc: 'Software reference' },
 ];
 
 // Parse arguments
