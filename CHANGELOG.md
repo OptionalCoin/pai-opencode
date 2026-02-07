@@ -13,6 +13,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Full implementation of PAI's two-tier pattern ensuring personal data never enters the repo while maintaining cross-project consistency.
 
+### Correct Structure
+
+```
+.opencode/skills/PAI/
+├── SYSTEM/                              ← PAI defaults (in repo - tracked)
+│   ├── AISTEERINGRULES.md
+│   ├── RESPONSEFORMAT.md
+│   ├── PAISECURITYSYSTEM/
+│   └── ...
+│
+└── USER/                                ← USER folder in REPO
+    ├── SKILLCUSTOMIZATIONS/            ← TRACKED (legitimate repo changes)
+    │   ├── Art/
+    │   │   ├── EXTEND.yaml
+    │   │   ├── PREFERENCES.md
+    │   │   ├── CharacterSpecs.md
+    │   │   └── SceneConstruction.md
+    │   ├── System/
+    │   │   ├── EXTEND.yaml
+    │   │   └── Workflows/GitPush.md
+    │   └── README.md
+    │
+    └── SOFTWAREREFERENCE               ← SYMLINKED to ~/.pai-brain (ignored)
+```
+
+### What Gets Committed vs What's Symlinked
+
+| Path | Type | In Git? | In ~/.pai-brain? |
+|------|------|---------|-------------------|
+| `SYSTEM/*` | Real files | ✅ Yes | ❌ No |
+| `USER/SKILLCUSTOMIZATIONS/*` | Real files | ✅ Yes | ❌ No |
+| `USER/SOFTWAREREFERENCE` | Symlink | ❌ No | ✅ Yes |
+
+### Benefits
+1. **Privacy**: Personal data never enters the git repo
+2. **Consistency**: Same configs across all PAI projects
+3. **Safety**: Upstream updates won't overwrite personal customizations
+4. **Portability**: Clone repo anywhere, run linker, get same config
+5. **SKILLCUSTOMIZATIONS tracked**: Your skill customizations ARE committed
+
+### Updated Linker Script
+```bash
+# Preview changes
+bun Tools/link-project.ts --dry-run
+
+# Apply symlinks
+bun Tools/link-project.ts --force
+```
+
+---
+
+
+Full implementation of PAI's two-tier pattern ensuring personal data never enters the repo while maintaining cross-project consistency.
+
 ### Corrected Structure
 
 ```
