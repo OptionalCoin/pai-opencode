@@ -21,28 +21,10 @@ node_modules/
 .opencode/settings.json
 opencode.json
 
-# Personal user data folders (symlinked)
-.opencode/USER/*
-!.opencode/USER/.gitkeep
-!.opencode/USER/README.md
-
-.opencode/skills/PAI/USER/TELOS
-.opencode/skills/PAI/USER/BUSINESS
-.opencode/skills/PAI/USER/FINANCES
-.opencode/skills/PAI/USER/HEALTH
-.opencode/skills/PAI/USER/WORK
-.opencode/skills/PAI/USER/TERMINAL
-.opencode/skills/PAI/USER/BANNER
-.opencode/skills/PAI/USER/STATUSLINE
-.opencode/skills/PAI/USER/PAISECURITYSYSTEM
-
-# ============================================
-# PAI SYSTEM & RUNTIME DATA
-# ============================================
-# Ignore runtime memory and session files
+# Personal data folders (symlinked if they exist in ~/.pai-brain)
+.opencode/USER/
+.opencode/skills/PAI/USER/
 .opencode/MEMORY/
-.opencode/sessions/
-.opencode/SESSIONS/
 .pai-brain/
 
 # ============================================
