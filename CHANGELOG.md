@@ -7,6 +7,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.2] - 2026-02-06
+
+### Major Improvement: Two-Tier SYSTEM/USER Pattern + Symlink Infrastructure
+
+Full implementation of PAI's two-tier pattern ensuring personal data never enters the repo while maintaining cross-project consistency.
+
+### Changed
+
+#### Two-Tier Pattern Structure
+| Tier | Location | Purpose | Safe from Upstream? |
+|------|----------|---------|---------------------|
+| **SYSTEM** | In repo | PAI defaults | ❌ Overwritten on updates |
+| **USER** | `~/.pai-brain` | Personal overrides | ✅ Never touched |
+
+#### Symlink Infrastructure
+- **All personal data now symlinked to `~/.pai-brain`**:
+  - `opencode.json` → `~/.pai-brain/opencode.json`
+  - `.opencode/settings.json` → `~/.pai-brain/settings.json`
+  - `.opencode/USER/` → `~/.pai-brain/USER/`
+  - `.opencode/MEMORY/` → `~/.pai-brain/MEMORY/`
+  - `.opencode/skills/PAI/USER/` → `~/.pai-brain/skills/PAI/USER/`
+
+- **`.gitignore` updated** to:
+  - Ignore all personal config files
+  - Track `SKILLCUSTOMIZATIONS/` (legitimate repo changes)
+  - Keep `.gitkeep` and `README.md` placeholders
+
+#### Enhanced Linker Script (`Tools/link-project.ts`)
+- **Dry-run mode**: `bun Tools/link-project.ts --dry-run` — preview changes
+- **Force mode**: `bun Tools/link-project.ts --force` — overwrite existing
+- **Better error handling**: Handles directories, graceful failures
+- **Status reporting**: Shows linked/skipped/failed count
+
+### Benefits
+1. **Privacy**: Personal data never enters the git repo
+2. **Consistency**: Same configs across all PAI projects
+3. **Safety**: Upstream updates won't overwrite personal customizations
+4. **Portability**: Clone repo anywhere, run linker, get same config
+
+### Migration
+```bash
+# New clones:
+git clone https://github.com/OptionalCoin/pai-opencode my-project
+cd my-project
+bun Tools/link-project.ts
+
+# Existing repos:
+git pull origin dev
+bun Tools/link-project.ts --force
+```
+
+---
+
 ## [1.2.1] - 2026-02-06
 
 ### Major Feature: Provider Profile System + Multi-Provider Research
