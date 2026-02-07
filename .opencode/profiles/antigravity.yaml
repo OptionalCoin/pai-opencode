@@ -1,0 +1,35 @@
+# Antigravity Provider Profile
+# ════════════════════════════════════
+#
+# Google models via Antigravity Auth plugin
+# Supports multi-account rotation for 2 Google Pro accounts
+#
+name: "antigravity"
+description: "Google Gemini + Claude via Antigravity (multi-account)"
+
+models:
+  default: "google/antigravity-gemini-3-pro-low"
+
+  # Primary agents
+  Architect: "google/antigravity-gemini-3-pro-low"
+  Engineer: "google/antigravity-gemini-3-pro-low"
+  QATester: "google/antigravity-gemini-3-flash-minimal"
+  Designer: "google/antigravity-gemini-3-pro-low"
+
+  # Research agents (can use --multi-research for native routing)
+  GeminiResearcher: "google/antigravity-gemini-3-pro-low"
+  GrokResearcher: "google/claude-sonnet-4-5-thinking"
+  PerplexityResearcher: "google/antigravity-gemini-3-flash-medium"
+  PerplexityProResearcher: "google/antigravity-gemini-3-pro-low"
+  CodexResearcher: "google/claude-opus-4-5-thinking"
+
+  # Content & specialized agents
+  Artist: "google/antigravity-gemini-3-pro-low"
+  Writer: "google/antigravity-gemini-3-pro-low"
+
+  # Additional agents from your config
+  Algorithm: "google/antigravity-gemini-3-pro-low"
+  Intern: "google/antigravity-gemini-3-pro-high"
+
+# Note: Claude models use Antigravity for authentication
+# The plugin handles OAuth flow for both Google and Anthropic
